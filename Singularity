@@ -16,4 +16,4 @@ hello.sh /hello.sh
 exec /bin/bash /hello.sh
 
 %test
-/hello.sh | grep -q 'Center - DATA'
+/hello.sh | grep DISCOVER

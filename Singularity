@@ -14,3 +14,6 @@ hello.sh /hello.sh
 
 %runscript
 exec /bin/bash /hello.sh
+
+%test
+/hello.sh | grep -q 'Center - DATA'

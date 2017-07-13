@@ -1,4 +1,10 @@
 # singularity-hello-world
-Simple hello world container for Singularity
 
-Container is configured to build on Singularity Hub and can be found there
+Very basic sample container definition for building on
+<a href="https://singularity-hub.org/">Singularity Hub</a>.
+
+Container is configured on Singularity Hub to re-build on each commit to the
+repository.
+
+Information about the container can be found
+<a href="https://singularity-hub.org/collections/293/">here</a>.

@@ -8,3 +8,10 @@ repository.
 
 Information about the container can be found
 <a href="https://singularity-hub.org/collections/293/">here</a>.
+
+Pull the container directly with the following command...
+
+```
+% singularity pull shub://hpcdevops/singularity-hello-world:master
+```
+

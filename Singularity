@@ -1,19 +1,27 @@
-Bootstrap: docker
-From: ubuntu:14.04
+Bootstrap:docker  
+From:ubuntu:latest  
 
 %labels
-    MAINTAINER hpcdevops
-    WHATAMI helloworld
+MAINTAINER hpcdevops
+WHATAMI helloworld
 
 %environment
-    HELLO_WORLD="DATA to DISCOVER"
-    export HELLO_WORLD
+HELLO_BASE=/code
+export HELLO_BASE
+HELLO_WORLD="DATA to DISCOVER"
+export HELLO_WORLD
 
 %files
-    hello.sh /hello.sh
+hello.sh ${HELLO_BASE}/hello.sh
 
 %runscript
-    exec /bin/bash /hello.sh
+exec /bin/bash ${HELLO_BASE}/hello.sh "$@"
 
 %test
-    /hello.sh | grep DISCOVER
+${HELLO_BASE}/hello.sh | grep DISCOVER
+
+%post
+apt-get install vim
+
+mkdir -p $HELLO_BASE
+chmod u+x /${HELLO_BASE}/hello.sh 

@@ -6,20 +6,18 @@ MAINTAINER hpcdevops
 WHATAMI helloworld
 
 %environment
-HELLO_BASE=/code
-export HELLO_BASE
 HELLO_WORLD="DATA to DISCOVER"
 export HELLO_WORLD
 
 %files
-hello.sh /code/hello.sh
+hello.sh /hello.sh
 
 %runscript
-exec /bin/bash /code/hello.sh "$@"
+exec /bin/bash /hello.sh "$@"
 
 %test
-/code/hello.sh | grep DISCOVER
+/hello.sh | grep DISCOVER
 
 %post
-chmod u+x /code/hello.sh
+chmod u+x /hello.sh
 

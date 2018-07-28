@@ -21,8 +21,6 @@ exec /bin/bash /code/hello.sh "$@"
 /code/hello.sh | grep DISCOVER
 
 %post
-apt-get install vim
-
 mkdir -p /code
 chmod u+x /code/hello.sh
 

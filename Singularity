@@ -21,6 +21,5 @@ exec /bin/bash /code/hello.sh "$@"
 /code/hello.sh | grep DISCOVER
 
 %post
-mkdir -p /code
 chmod u+x /code/hello.sh
 
